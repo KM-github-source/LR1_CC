@@ -1,0 +1,103 @@
+0 Global SymbolTable:
+tmp_name    name/value  type        is_inst     entry       
+T1:         a           int var             false       
+T2:         b           int var             false       
+T3:         program     F1                  false       
+T4:         demo        F2                  false       
+T5:         main        F3                  false       
+
+1 F1 SymbolTable:
+tmp_name    name/value  type        is_inst     entry       
+            program     int_func    false       1           
+T1:         a           int var             false       
+T2:         b           int var             false       
+T3:         c           int var             false       
+T4:         i           int var             false       
+T5:         j           int var             false       
+T6:         0           int inst            true        
+T7:         T7          T7                  false       
+T8:         3           int inst            true        
+T9:         6           int inst            true        
+T10:        T10         T10                 false       
+T11:        T11         T11                 false       
+T12:        1           int inst            true        
+T13:        T13         T13                 false       
+T14:        T14         T14                 false       
+T15:        100         int inst            true        
+T16:        2           int inst            true        
+T17:        T17         T17                 false       
+
+2 F2 SymbolTable:
+tmp_name    name/value  type        is_inst     entry       
+            demo        int_func    false       25          
+T1:         a           int var             false       
+T2:         r           int var             false       
+T3:         2           int inst            true        
+T4:         T4          T4                  false       
+T5:         T5          T5                  false       
+
+3 F3 SymbolTable:
+tmp_name    name/value  type        is_inst     entry       
+            main        int_func    false       31          
+T1:         2           int inst            true        
+T2:         a           int arr-2-2         false       
+T3:         r           int var             false       
+T4:         0           int inst            true        
+T5:         a*0*0       int arr             false       
+T6:         3           int inst            true        
+T7:         1           int inst            true        
+T8:         a*0*1       int arr             false       
+T9:         T9          T9                  false       
+T10:        a*1*0       int arr             false       
+T11:        T11         T11                 false       
+T12:        a*1*1       int arr             false       
+T13:        T13         T13                 false       
+T14:        T14         T14                 false       
+
+0	( Program start ,	_ ,	_ ,	_ )
+1	( F1: ,	_ ,	_ ,	_ )
+2	( = ,	T6 ,	_ ,	T4 )
+3	( + ,	T2 ,	T3 ,	T7 )
+4	( j> ,	T1 ,	T7 ,	12 )
+5	( j ,	_ ,	_ ,	6 )
+6	( jnz ,	T8 ,	_ ,	8 )
+7	( j ,	_ ,	_ ,	10 )
+8	( j== ,	T1 ,	T3 ,	12 )
+9	( j ,	_ ,	_ ,	10 )
+10	( jnz ,	T9 ,	_ ,	12 )
+11	( j ,	_ ,	_ ,	18 )
+12	( * ,	T2 ,	T3 ,	T10 )
+13	( * ,	T10 ,	T3 ,	T11 )
+14	( + ,	T11 ,	T12 ,	T13 )
+15	( + ,	T1 ,	T13 ,	T14 )
+16	( = ,	T14 ,	_ ,	T5 )
+17	( j ,	_ ,	_ ,	19 )
+18	( = ,	T1 ,	_ ,	T5 )
+19	( j<= ,	T4 ,	T15 ,	21 )
+20	( j ,	_ ,	_ ,	24 )
+21	( * ,	T5 ,	T16 ,	T17 )
+22	( = ,	T17 ,	_ ,	T4 )
+23	( j ,	_ ,	_ ,	19 )
+24	( return ,	_ ,	_ ,	T4 )
+25	( F2: ,	_ ,	_ ,	_ )
+26	( + ,	T1 ,	T3 ,	T4 )
+27	( = ,	T4 ,	_ ,	T1 )
+28	( * ,	T1 ,	T3 ,	T5 )
+29	( = ,	T5 ,	_ ,	T2 )
+30	( return ,	_ ,	_ ,	T2 )
+31	( F3: ,	_ ,	_ ,	_ )
+32	( = ,	T6 ,	_ ,	T5 )
+33	( + ,	T5 ,	T7 ,	T9 )
+34	( = ,	T9 ,	_ ,	T8 )
+35	( + ,	T5 ,	T8 ,	T11 )
+36	( = ,	T11 ,	_ ,	T10 )
+37	( param ,	T10 ,	_ ,	_ )
+38	( call ,	F2 ,	_ ,	T13 )
+39	( param ,	T13 ,	_ ,	_ )
+40	( param ,	T8 ,	_ ,	_ )
+41	( param ,	T5 ,	_ ,	_ )
+42	( call ,	F1 ,	_ ,	T14 )
+43	( = ,	T14 ,	_ ,	T12 )
+44	( = ,	T12 ,	_ ,	T3 )
+45	( return ,	_ ,	_ ,	T3 )
+46	( Program end ,	_ ,	_ ,	_ )

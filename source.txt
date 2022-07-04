@@ -1,0 +1,18 @@
+int a;
+int b;
+int main(void)
+{
+    int a;
+    int b;
+    int c;
+    int d[5];
+    int e[3][2];
+    a = 3;
+    b = 4;
+    c = f[0];
+    d[3] = 0;
+    e[1][2] = 2;
+    a = d[3];
+    b = e[1][2];
+    return a;
+}
